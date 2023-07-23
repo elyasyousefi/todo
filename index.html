@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+    <link rel="stylesheet" href="./FontAwesome/css/all.css" />
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="header">
+      <p id="pToday">Date: <span id="today"></span></p>
+      <h1>ToDo App</h1>
+      <img src="./img/TodoIcon.png" alt="" />
+    </section>
+    <section class="inputdata">
+      <div class="mytasks">
+        <label for="inputtask">Task:</label>
+        <input
+          id="inputmaintask"
+          type="text"
+          value=""
+          placeholder="Input Your Task"
+          name="inputtask"
+          dir="auto"
+        />
+      </div>
+      <div class="taskPrperties">
+              <div class="startTaskDates">
+        <label for="inputdate">Start Date:</label>
+        <input
+          id="inputmaindate"
+          type="datetime-local"
+          value=""
+          placeholder="date"
+          name="inputdate"
+        />
+      </div>
+
+      <div class="startTaskDates">
+
+        <label for="inputduration">End Date:</label>
+        <input
+          id="inputmainduration"
+          type="datetime-local"
+          value=""
+          placeholder="time"
+          name="inputmainduration"
+         />
+      </div>
+      <div class="okButton">
+        <button id="ok" type="submit">OK</button>
+      </div>
+      </div>
+
+    </section>
+    <hr />
+    <section class="headings">
+      <div class="title">
+        <h2 id="pastDiv">Past</h2>
+      </div>
+      <div class="title">
+        <h2 id="todayDiv">Today</h2>
+      </div>
+      <div class="title">
+        <h2 id="futureDiv">Future</h2>
+      </div>
+    </section>
+    <section class="buttons">
+      <div class="deleteAll">
+        <i class="fa-solid fa-trash-can"></i>
+        <span>Delete All Tasks </span>
+      </div>
+      <div class="deletePast">
+        <i class="fa-solid fa-trash-can"></i>
+        <span>Delete All Past Tasks </span>
+      </div>
+      <div class="deleteToday">
+        <i class="fa-solid fa-trash-can"></i>
+        <span>Delete All Today Tasks </span>
+      </div>
+      <div class="deleteFuture">
+        <i class="fa-solid fa-trash-can"></i>
+        <span>Delete All Future Tasks </span>
+      </div>
+      <div class="refreshPage" onclick="reload()">
+        <i class="fa-solid fa-arrows-rotate"></i>
+        <span>Refresh </span>
+      </div>
+    </section>
+    <section class="myplans">
+      <div class="dayplans pastSection">
+        <div class="tasks">
+          <table id="pastTableTasks" class="tables">
+            <thead>
+              <tr>
+                <th>Delete</th>
+                <th>Rank</th>
+                <th>Task</th>
+                <th>StartDate</th>
+                <th>EndDate</th>
+                <th>Percentage of duty performed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="dayplans todaySection">
+        <div class="tasks">
+          <table id="todayTableTasks" class="tables">
+            <thead>
+              <tr>
+                <th>Delete</th>
+                <th>Rank</th>
+                <th>Task</th>
+                <th>StartDate</th>
+                <th>EndDate</th>
+                <th>Percentage of duty performed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="dayplans futureSection">
+        <div class="tasks">
+          <table id="futureTableTasks" class="tables">
+            <thead>
+              <tr>
+                <th>Delete</th>
+                <th>Rank</th>
+                <th>Task</th>
+                <th>StartDate</th>
+                <th>EndDate</th>
+                <th>Percentage of duty performed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
